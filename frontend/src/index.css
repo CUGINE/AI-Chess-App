@@ -1,0 +1,68 @@
+/* Glassy Modern Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(240, 240, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(80, 80, 120, 0.07) inset;
+  backdrop-filter: blur(2px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, rgba(80,80,120,0.18) 0%, rgba(120,120,180,0.32) 100%);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(80, 80, 120, 0.10);
+  border: 2px solid rgba(255,255,255,0.5);
+  min-height: 40px;
+  transition: background 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(1.5px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(120deg, rgba(60,60,100,0.35) 0%, rgba(80,80,120,0.45) 100%);
+  box-shadow: 0 4px 16px rgba(80, 80, 120, 0.18);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a3a3c2 #f0f0ff;
+}
+
+/* Ensure the body has the scrollbar style too */
+html, body {
+  scrollbar-width: thin;
+  scrollbar-color: #b6bbc7 #f7fafc;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000;
+}
+
+.input-style {
+  width: 100%;
+  padding: 10px 10px 10px 2.5rem;
+  background-color: #f5f3f3;
+  border: 1px solid #f5f3f3;
+  color: #000;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-style:focus {
+  border-color: #000;
+}
